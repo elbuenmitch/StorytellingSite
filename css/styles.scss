@@ -57,6 +57,11 @@ body{
     font-size: 62.5%;
     font-family: 'Oswald', sans-serif;
     height: 100%;
+    word-break: break-word;
+}
+
+svg:not(.svg-5, .svg-3){
+    opacity: 0.9;
 }
 
 
@@ -232,6 +237,9 @@ body{
     width: 455px;
     height: 460px;
 }
+#your-c{
+    position: relative;
+}
 
 /*/ ----------------------------------- /*/
 /* Navigation Bar */
@@ -276,6 +284,12 @@ body{
         }
     }
 }
+.horizontal-bar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+}
 .navbar-icons{
     z-index: 5;
     font-family: Oswald;
@@ -299,6 +313,36 @@ body{
             color: $navbar-text-highlighted;
             transform: scale(1.1);
         }
+    }
+}
+.navbar-languages{
+    z-index: 5;
+    font-family: Open sans;
+    /* opacity: 0.9; */
+    /* font-size: 27px; */
+    /* letter-spacing: -1.35px; */
+    color: white;
+    /* margin-left: 2px; */
+    position: relative;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-flow: column;
+    /* justify-self: center; */
+    text-align: end;
+    .navbar-item {
+        font-size: 1.3rem;
+        color: white;
+        margin-top: 0.2rem;
+        transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s, transform cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+        &:hover{
+            color: $navbar-text-highlighted;
+            transform: scale(1.1);
+        }
+    }
+    .navbar-item-opaque {
+        font-size: 1.3rem;
+        color: gray;
+        margin-top: 0.2rem;
     }
 }
 
@@ -433,6 +477,58 @@ body{
         left: -242px;
     }
 }
+.your-company-name-jap{
+    color : #FCE7A0;
+    position: relative;
+    &:hover{
+        color: $navbar-text-highlighted;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        height: 350px;
+        width: 406px;
+        border-right: 7px solid #fdebb1;
+        border-bottom: 7px solid #fdebb1;
+        top: 44px;
+        left: -306px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        height: 194px;
+        width: 7px;
+        background-color: #fdebb1;
+        top: 388px;
+        left: -306px;
+    }
+}
+.your-company-name-esp{
+    color : #FCE7A0;
+    position: relative;
+    &:hover{
+        color: $navbar-text-highlighted;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        height: 350px;
+        width: 378px;
+        border-right: 7px solid #fdebb1;
+        border-bottom: 7px solid #fdebb1;
+        top: 44px;
+        left: -306px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        height: 194px;
+        width: 7px;
+        background-color: #fdebb1;
+        top: 388px;
+        left: -306px;
+    }
+}
 .your-company-name-simple{
     color : #FCE7A0;
     position: relative;
@@ -479,6 +575,9 @@ body{
     display: flex;
     flex-flow: column;
     justify-content: center;
+}
+.my-line-break{
+    display:none;
 }
 .body-title-1{
     font-family: Open Sans;
@@ -533,6 +632,15 @@ body{
     margin-bottom: 12rem;
     margin-top: 9rem;
 }
+.svg-title-text-no-wrap{
+    font-family: 'Muli', sans-serif;
+    font-size: 2.3rem;
+    color: #59626F;
+    position: relative;
+    margin-bottom: 12rem;
+    margin-top: 9rem;
+    white-space: nowrap;
+}
 .svg-title-quote-dark{
     font-family: 'Muli', sans-serif;
     font-size: 2.3rem;
@@ -561,6 +669,9 @@ body{
 .numbered-list-1{
     margin-top: 6rem;
     margin-bottom: 6rem;
+}
+.numbered-list-before-change{
+    margin-bottom: 2rem;
 }
 .numbered-list-2{
     margin-top: 6rem;
@@ -647,10 +758,10 @@ body{
 }
 .svg-3{
     width: 110%;
-    height: 132%;
+    height: 80%;
     position: absolute;
     z-index: -1;
-    top: -94px;
+    top: -63px;
     left: -5%;
 }
 .svg-4{
@@ -747,17 +858,6 @@ body{
 
 
 
-/*/ -----------------------------------------------------------------/*/
-/*/ -------------------    500px screen sizes     -------------------/*/
-/*/ -----------------------------------------------------------------/*/
-@media(max-width: 500px){
-
-    body{
-
-    }
-
-}
-
 
 
 /*/ -----------------------------------------------------------------/*/
@@ -798,6 +898,9 @@ body{
     .svg-title-text{
         font-size: 2rem;
     }
+    .svg-title-text-no-wrap{
+        font-size: 2rem;
+    }
     .text-quote-1{
         font-size: 1.7rem;
     }
@@ -811,45 +914,6 @@ body{
     
 }
 
-/*/ -----------------------------------------------------------------/*/
-/*/ -------------------   785px screen sizes     -------------------/*/
-/*/ -----------------------------------------------------------------/*/
-@media(max-width: 785px){
-
-    .body-title-1{
-        font-size: 2rem;
-    }
-    .svg-title-text{
-        font-size: 2rem;
-    }
-    .text-quote-1{
-        font-size: 1.7rem;
-    }
-    .svg-title-quote-dark{
-        font-size: 2rem;
-    }
-    .floating-container {
-        right: 38px;
-        left: auto;
-    }
-    .full-screen-img-90h {
-        background-position: -441px 50%;
-    }
-    .container-text{
-        width: 90%;
-    }
-    .numbered-list-1-item {
-        grid-template-columns: 50px auto 10px;
-        margin-bottom: 1rem;
-    }
-    .container-text-quote {
-        width: 75%;
-    }
-    .heres-the-thing-container {
-        width: 560px;
-        height: 140px;
-    }
-}
 
 /*/ -----------------------------------------------------------------/*/
 /*/ -------------------   847px screen sizes     -------------------/*/
@@ -897,34 +961,109 @@ body{
 }
 
 
+/*/ -----------------------------------------------------------------/*/
+/*/ -------------------   785px screen sizes     -------------------/*/
+/*/ -----------------------------------------------------------------/*/
+@media(max-width: 785px){
+
+    .body-title-1{
+        font-size: 2rem;
+    }
+    .svg-title-text{
+        font-size: 2rem;
+    }
+    .svg-title-text-no-wrap{
+        font-size: 2rem;
+    }
+    .text-quote-1{
+        font-size: 1.7rem;
+    }
+    .svg-title-quote-dark{
+        font-size: 2rem;
+    }
+    .floating-container {
+        right: 38px;
+        left: auto;
+    }
+    .full-screen-img-90h {
+        background-position: -441px 50%;
+    }
+    .container-text{
+        width: 90%;
+    }
+    .numbered-list-1-item {
+        grid-template-columns: 50px auto 10px;
+        margin-bottom: 1rem;
+    }
+    .container-text-quote {
+        width: 75%;
+    }
+    .heres-the-thing-container {
+        width: 560px;
+        height: 140px;
+    }
+}
+
+
+
+/*/ -----------------------------------------------------------------/*/
+/*/ -------------------    500px screen sizes     -------------------/*/
+/*/ -----------------------------------------------------------------/*/
+// @media(max-width: 500px){
+
+//     body{
+
+//     }
+
+// }
 
 
 /*/ -----------------------------------------------------------------/*/
 /*/ -------------------    375px screen sizes     -------------------/*/
 /*/ -----------------------------------------------------------------/*/
-@media(max-width: 420px){
+@media(max-width: 520px){
     
     .full-screen-img-90h {
-        background-position: -441px -108px;
+        background-position: 46% 50%;
+        background-repeat: no-repeat;
+    }
+    .your-company-name:before {
+        display: none;
+    }
+    .your-company-name:after {
+        content: '';
+        position: absolute;
+        height: 355px;
+        width: 7px;
+        background-color: #fdebb1;
+        left: 50%;
+        top: 100%;
     }
 
-
-
-
-
+    .your-c:after {
+        // content: '';
+        // position: absolute;
+        // height: 350px;
+        // width: 7px;
+        // border-right: 7px solid #fdebb1;
+        // top: 44px;
+        // left: 50%;
+    }
 
     .floating-container {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 5vh 60px 52vh 45px 60px;
+        right: auto;
+        width: 100%;
+        top: 20px;
         .top-title {
             color: white;
             font-size: 3.2rem;
-            margin-bottom: -16px;
-            margin-left: -1px;
+            /* margin-bottom: -16px; */
+            margin-left: -5px;
             letter-spacing: -3.6px;
             text-align: center;
-            margin-top: 52vh;
+            grid-row: 2;     
         }
         
         .top-subtitle{
@@ -933,15 +1072,15 @@ body{
             letter-spacing: -2.05px;
             color: #fdebb1;
             font-weight: 400;
-            margin: 1px 1px 6px 1px;
+            margin: 1px 1px 6px -2px;
             text-align: center;
+            grid-row: 3;
         }
         .job-title-wrapper {
             height: 2.4rem;
             background: #434A53;
             opacity: 0.8;
             margin: 0.2rem 0rem;
-            /* width: 317px; */
             .job-title-text {
                 font-family: Oswald;
                 font-size: 1.4rem;
@@ -951,21 +1090,198 @@ body{
                 color: white;
             }
         }
-        .navbar-icons {
+        .job-title-wrapper-nextremer{
+            grid-row: 4;
+        }
+        .job-title-wrapper-your-c{
+            grid-row: 5;
+        }
+        .navbar{
             z-index: 5;
             font-family: Oswald;
-            opacity: 0.9;
-            font-size: 27px;
-            letter-spacing: -1.35px;
+            font-size: 1.2rem;
+            letter-spacing: -0.85px;
             color: white;
-            margin: 0 auto;
+            /* margin-left: 2px; */
             position: relative;
             display: flex;
             flex-flow: row;
-            justify-self: center;
-            margin-top: 0.7rem;
+            grid-row: 1;
+            justify-content: space-around;
+            width: 320px;
+            margin: 0 auto;
+            margin-left: auto;
+        }
+        .horizontal-bar{
+            grid-row: 6;
+            .navbar-icons {
+                z-index: 5;
+                font-family: Oswald;
+                opacity: 0.9;
+                font-size: 27px;
+                letter-spacing: -1.35px;
+                color: white;
+                position: relative;
+                display: flex;
+                flex-flow: row;
+                justify-self: center;
+                width: 150px;
+                margin-right: 5rem;
+                grid-row: 6;
+                .navbar-item{
+                    margin: 0 auto;
+                }
+            }
+            .navbar-languages{
+                margin-top: 0.4rem;
+                margin-right: 0.7rem;
+            }
         }
     }
+
+    //Text Sections
+    .container-text{
+        width: 100%;
+    }
+    .heres-the-thing-container {
+        width: 100%;
+        height: auto;
+        padding: 0.8rem 0;
+    }
+    .my-line-break{
+        display: block;
+    }
+    .body-title-1 {
+        font-size: 7.8vw;
+        line-height: 2.5rem;
+        .bold{
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+    .text-clear {
+        font-family: Open Sans;
+        font-size: 1.25rem;
+        margin: 1.5rem 1rem 1.5rem 1.3rem;
+    }
+    .text-clear-large {
+        font-size: 1.55rem;
+    }
+    .text-quote-1 {
+        line-height: 9.4vw;
+        font-size: 1.6rem;
+    }
+    .container-text-quote {
+        width: 75%;
+        margin: auto auto;
+    }
+    .numbered-list-1, .numbered-list-2 {
+        margin-top: 3.5rem;
+        margin-bottom: auto;
+    }
+    .numbered-list-1-item{
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: 0;
+    }
+    .numbered-list-1-numeral{
+        align-self: center;
+        font-family: Open Sans;
+        font-weight: bold;
+        font-size: 29px;
+        color: #59626F;
+        /* justify-self: center; */
+        float: left;
+        margin: 0.4rem 1rem 0 1rem;
+    }
+    .svg-container{
+        position: relative;
+        height: 45vh;
+        display: flex;
+    }
+    .svg-container-bottom {
+        position: relative;
+        height: 3vh;
+    }
+    .section-change{
+        height: 8vh;
+    }
+    .svg-title-text {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        margin: auto;
+    }
+    .svg-title-text-no-wrap {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        margin: auto;
+    }
+    .svg-title-quote-dark {
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+        margin: auto;
+    }
+    .container-svg-title {
+        display: flex;
+    }
+    .holy-shit-huge {
+        padding: 4.4rem;
+        padding-left: 0.4rem;
+    }
+    .paragraph-section {
+        margin-top: 2.8rem;
+        margin-bottom: 2.8rem;
+    }
+    .svg-1{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        top: 5%;
+        overflow: visible;
+    }
+    .svg-2 {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 5px;
+        height: 100%;
+    }
+    .svg-3{
+        width: 110%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: -22px;
+        left: -5%;
+    }
+    .svg-4 {
+        width: 120%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        height: 100%;
+        overflow: visible;
+        left: -10%;
+    }
+    .svg-5 {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: auto;
+        height: 200%;
+    }
+    .svg-6 {
+        width: 130%;
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        top: 0;
+        overflow: visible;
+        left: -20%;
+    }
+    
+
 }
 
 
