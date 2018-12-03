@@ -299,7 +299,7 @@ svg:not(.svg-5, .svg-3) {
     font-size: 1.4rem;
     margin: 10px -3px -7px 1px;
     justify-self: end;
-    letter-spacing: -1.25px;
+    letter-spacing: -1px;
     color: #FFDA56; }
   .floating-container-bottom .job-title-wrapper {
     height: 2.2rem;
@@ -342,7 +342,7 @@ svg:not(.svg-5, .svg-3) {
 .top-subtitle {
   font-family: Oswald;
   font-size: 2.3rem;
-  letter-spacing: -2.05px;
+  letter-spacing: -2.15px;
   color: #fdebb1;
   font-weight: 400;
   margin: 1px 1px -7px 1px; }
@@ -481,20 +481,23 @@ svg:not(.svg-5, .svg-3) {
   display: none; }
 
 .body-title-1 {
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 2.2rem;
   line-height: 3.5rem;
   color: #59626F;
   text-align: center;
-  font-weight: 200; }
+  font-weight: 200;
+  font-style: normal; }
 
 .text-clear {
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.45rem;
   color: #59626F;
   color: #59626f;
   margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-style: normal;
+  font-weight: 400; }
 
 .text-clear-large {
   font-size: 2.0rem; }
