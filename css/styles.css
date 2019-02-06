@@ -226,6 +226,8 @@ svg:not(.svg-5, .svg-3) {
       .navbar .navbar-item .navbar-item-text:hover::before {
         width: 100%;
         opacity: 1; }
+  .navbar .cv-item {
+    color: red; }
 
 .horizontal-bar {
   display: flex;
