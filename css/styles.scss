@@ -209,7 +209,7 @@ svg:not(.svg-5, .svg-3){
 }
 .full-screen-img-90h{
     position: relative;
-    height: 90%;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: 100% 50%;
@@ -359,7 +359,8 @@ svg:not(.svg-5, .svg-3){
     font-family: 'Open sans', sans-serif;
     color: #434a53;
     font-size: 1.1rem;
-    width: 290px;
+    width: 100%;
+    margin-top: 2rem;
     background-color: #ffe89f;
     opacity: 0.7;
     padding: 0.7rem 1rem 0.9rem 1rem;
@@ -401,16 +402,19 @@ svg:not(.svg-5, .svg-3){
     padding-top: 17rem;
     z-index: 0;
     .top-title{
-        font-size: 2.85rem;
-        justify-self: end;
+        font-size: 2.95rem;
+        justify-self: center;
         color: white;
+        a, a:visited{
+            color: $navbar-text;
+        }
     }
     .top-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin: 10px -3px -7px 1px;
-        justify-self: end;
+        justify-self: center;
         letter-spacing: -1px;
-        color: $navbar-text-highlighted;
+        color: $subtitles-soft-yellow;
     }
     .job-title-wrapper {
         height: 2.2rem;
@@ -424,7 +428,7 @@ svg:not(.svg-5, .svg-3){
             font-size: 1.3rem;
             color: $navbar-text;
             .your-company-name-simple{
-                color: $navbar-text-highlighted;
+                color: $subtitles-soft-yellow;
             }
         }
     }
@@ -465,8 +469,8 @@ svg:not(.svg-5, .svg-3){
 
 .top-subtitle{
     font-family: Oswald;
-    font-size: 2.3rem;
-    letter-spacing: -2.15px;
+    font-size: 2.1rem;
+    letter-spacing: -2.05px;
     color: $subtitles-soft-yellow;
     font-weight: 400;
     margin: 1px 1px -7px 1px;
@@ -493,28 +497,32 @@ svg:not(.svg-5, .svg-3){
 .your-company-name{
     color : #FCE7A0;
     position: relative;
-    &:hover{
-        color: $navbar-text-highlighted;
+    .actual-link{
+        color : #FCE7A0 !important;
+        transition: color cubic-bezier(0.075, 0.82, 0.165, 1) $time-1s;
+        &:hover{
+            color: $navbar-text-highlighted !important;
+        }
     }
-    &:after{
-        content: '';
-        position: absolute;
-        height: 350px;
-        width: 369px;
-        border-right: 7px solid $subtitles-soft-yellow;
-        border-bottom: 7px solid $subtitles-soft-yellow;
-        top: 44px;
-        left: -242px;
-    }
-    &:before{
-        content: '';
-        position: absolute;
-        height: 194px;
-        width: 7px;
-        background-color: $subtitles-soft-yellow;
-        top: 388px;
-        left: -242px;
-    }
+    // &:after{
+    //     content: '';
+    //     position: absolute;
+    //     height: 350px;
+    //     width: 369px;
+    //     border-right: 7px solid $subtitles-soft-yellow;
+    //     border-bottom: 7px solid $subtitles-soft-yellow;
+    //     top: 44px;
+    //     left: -242px;
+    // }
+    // &:before{
+    //     content: '';
+    //     position: absolute;
+    //     height: 194px;
+    //     width: 7px;
+    //     background-color: $subtitles-soft-yellow;
+    //     top: 388px;
+    //     left: -242px;
+    // }
 }
 .your-company-name-jap{
     color : #FCE7A0;
