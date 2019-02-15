@@ -197,7 +197,7 @@ svg:not(.svg-5, .svg-3){
     // display: grid;
 }
 .container-top{
-    height: 840px;
+    height: 100vh;
 }
 .container-bottom{
     height: 840px;
@@ -380,6 +380,7 @@ svg:not(.svg-5, .svg-3){
     .announcement-link, a, a:visited{
         color: #4d5765;
         font-weight: 600;
+        letter-spacing: -0.5px;
         text-decoration-line: none;
         transition: 
             text-decoration-line cubic-bezier(0.075, 0.82, 0.165, 1) $time-1s,
@@ -1077,18 +1078,18 @@ svg:not(.svg-5, .svg-3){
         background-position: 46% 50%;
         background-repeat: no-repeat;
     }
-    .your-company-name:before {
-        display: none;
-    }
-    .your-company-name:after {
-        content: '';
-        position: absolute;
-        height: 355px;
-        width: 7px;
-        background-color: #fdebb1;
-        left: 50%;
-        top: 100%;
-    }
+    // .your-company-name:before {
+    //     display: none;
+    // }
+    // .your-company-name:after {
+    //     content: '';
+    //     position: absolute;
+    //     height: 355px;
+    //     width: 7px;
+    //     background-color: #fdebb1;
+    //     left: 50%;
+    //     top: 100%;
+    // }
 
     .your-c:after {
         // content: '';
@@ -1102,13 +1103,13 @@ svg:not(.svg-5, .svg-3){
 
     .floating-container {
         display: grid;
-        grid-template-rows: 5vh 60px 52vh 45px 60px;
+        grid-template-rows: 5vh 60px 62vh 45px 60px;
         right: auto;
         width: 100%;
         top: 20px;
         .top-title {
             color: white;
-            font-size: 3.2rem;
+            font-size: 3.3rem;
             /* margin-bottom: -16px; */
             margin-left: -5px;
             letter-spacing: -3.6px;
@@ -1118,7 +1119,7 @@ svg:not(.svg-5, .svg-3){
         
         .top-subtitle{
             font-family: Oswald;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             letter-spacing: -2.05px;
             color: #fdebb1;
             font-weight: 400;
