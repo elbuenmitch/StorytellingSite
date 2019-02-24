@@ -373,7 +373,7 @@ svg:not(.svg-5, .svg-3) {
       .floating-container-bottom .navbar .navbar-item:hover {
         color: #FFDA56; }
   .floating-container-bottom .navbar-icons .navbar-item {
-    margin: 0 0.6rem; }
+    margin: 0 1.2rem; }
 
 .top-title {
   color: white;
@@ -1209,4 +1209,4 @@ svg:not(.svg-5, .svg-3) {
     width: 100%;
     overflow-x: hidden; } }
 
-/*# sourceMappingURL=styles25022019.css.map */
+/*# sourceMappingURL=styles.css.map */
