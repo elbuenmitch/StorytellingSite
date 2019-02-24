@@ -312,30 +312,10 @@ svg:not(.svg-5, .svg-3){
         margin-right: 1.2rem;
         transition: 
             color cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s,
-            transform cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s,
-            fill cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
+            transform cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s;
         &:hover{
             color: $navbar-text-highlighted;
             transform: scale(1.1);
-            svg{
-                #Combined-Shape{
-                    fill: #FFDA56;
-                }
-            }
-        }
-        .wantedly-icon{
-            margin-top: 13px;
-        }
-    }
-    .jp-cv-container{
-        display: flex;
-        flex-direction: column;
-        margin-top: 4px;
-        // background-color: green;
-        .cv-item-jp{
-            // color: red;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
         }
     }
 }
@@ -399,7 +379,7 @@ svg:not(.svg-5, .svg-3){
 
     .announcement-link, a, a:visited{
         color: #4d5765;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -0.5px;
         text-decoration-line: none;
         transition: 
@@ -551,25 +531,25 @@ svg:not(.svg-5, .svg-3){
     &:hover{
         color: $navbar-text-highlighted;
     }
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     height: 350px;
-    //     width: 406px;
-    //     border-right: 7px solid #fdebb1;
-    //     border-bottom: 7px solid #fdebb1;
-    //     top: 44px;
-    //     left: -306px;
-    // }
-    // &:before{
-    //     content: '';
-    //     position: absolute;
-    //     height: 194px;
-    //     width: 7px;
-    //     background-color: #fdebb1;
-    //     top: 388px;
-    //     left: -306px;
-    // }
+    &:after {
+        content: '';
+        position: absolute;
+        height: 350px;
+        width: 406px;
+        border-right: 7px solid #fdebb1;
+        border-bottom: 7px solid #fdebb1;
+        top: 44px;
+        left: -306px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        height: 194px;
+        width: 7px;
+        background-color: #fdebb1;
+        top: 388px;
+        left: -306px;
+    }
 }
 .your-company-name-esp{
     color : #FCE7A0;
@@ -1123,7 +1103,7 @@ svg:not(.svg-5, .svg-3){
 
     .floating-container {
         display: grid;
-        grid-template-rows: 4vh 60px 54.2vh 45px 43px;
+        grid-template-rows: 5vh 60px 62vh 45px 60px;
         right: auto;
         width: 100%;
         top: 20px;
@@ -1196,41 +1176,21 @@ svg:not(.svg-5, .svg-3){
                 display: flex;
                 flex-flow: row;
                 justify-self: center;
-                // width: 150px;
-                // margin-right: 5rem;
+                width: 150px;
+                margin-right: 5rem;
                 grid-row: 6;
                 .navbar-item{
-                    // margin: 0 5px;
                     margin: 0 auto;
-                    padding-left: 10px;
-                }
-                .jp-cv-container{
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 8px;
-                    line-height: 16px;
-                    .cv-item-jp{
-                            /* font-size: 0.9rem; */
-                        letter-spacing: 0;
-                        font-size: 1.1rem;
-                        line-height: 1.2rem;
-                    }
                 }
             }
             .navbar-languages{
                 margin-top: 0.4rem;
                 margin-right: 0.7rem;
-                .navbar-item{
-                    font-size: 1.1rem;
-                }
-                .navbar-item-opaque{
-                    font-size: 1.1rem;
-                }
             }
         }
         .top-page-announcement{
             position: absolute;
-            top: 46.6vh;
+            top: 50.3vh;
             height: 100px;
             width: 100%;
         }
